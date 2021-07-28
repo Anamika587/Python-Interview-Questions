@@ -1,0 +1,438 @@
+                                                               Python Interview Questions 
+
+1. What are Data Types?
+
+A data type is a set of values and a set of operations defined on data. An implementation of a data type is an expression of data and operations in terms of a specific programming language such as Java, C ++, or Python.
+
+
+2. Name four of the main data types in Python.
+
+Numbers, strings, lists, dictionaries, tuples, files, and sets are generally considered the main types of data. Types, None, and Booleans are sometimes also classified this way. The integer, floating-point, complex, fraction and decimal are numerical data types and simple strings and Unicode strings in Python 2 and text strings and byte strings in Python 3 are the types of string data types.
+
+
+3. Why are these data types known as Python’s core data types?
+
+They are known as the core data types because they are part of the Python language itself and are always available to create other objects, you usually need to call functions in imported modules.
+Most of the data types have a specific syntax for generating objects: “spam”, for example, is an expression that creates a string and determines the set of operations that can be applied to it. For this reason, main types are built into Python syntax. Instead, you must call the built-in open function to create a file object.
+
+
+4. What does immutable mean and what three types of Python core data types are considered immutable?
+
+An immutable data type is a type of object which cannot be modified after its creation. Numbers, strings, and tuples in Python fall into this category. Although you cannot modify an immutable object in place, you can always create a new one by running an expression.
+
+
+5. What does sequence mean and which three types of data fall into this category?
+
+A sequence data type is a collection of objects ordered by a specific position. In Python, Strings, lists, and tuples are the data types based on sequences. The Sequences share common sequence operations, such as indexing, concatenation, and slicing, but also have type-specific method calls.
+
+
+6. What does mapping mean and what kind of data type is based on mapping?
+
+The term mapping refers to an object that maps keys to associated values. The Python dictionary is the only type of mapping in the base typeset. Mappings do not maintain any left-to-right position order; they support access to stored data by key, as well as type-specific method calls.
+
+ 
+7. What is the difference between list and tuples in Python?
+
+             LIST	                                                               TUPLES
+-> Lists are mutable i.e they can be edited.	                  -> Tuples are immutable (tuples are lists which can’t be edited).
+-> Lists are slower than tuples.	                              -> Tuples are faster than list.
+-> Syntax: list_1 = [10, ‘Chelsea’, 20]	                          -> Syntax: tup_1 = (10, ‘Chelsea’ , 20)
+
+8. What are local variables and global variables in Python?
+
+Global Variables:
+Variables declared outside a function or in global space are called global variables. These variables can be accessed by any function in the program.
+
+Local Variables:
+Any variable declared inside a function is known as a local variable. This variable is present in the local space and not in the global space.
+
+
+9. What is type conversion in Python?
+
+Type conversion refers to the conversion of one data type iinto another.
+
+int() – converts any data type into integer type
+float() – converts any data type into float type
+ord() – converts characters into integer
+hex() – converts integers to hexadecimal
+oct() – converts integer to octal
+tuple() – This function is used to convert to a tuple.
+set() – This function returns the type after converting to set.
+list() – This function is used to convert any data type to a list type.
+dict() – This function is used to convert a tuple of order (key,value) into a dictionary.
+str() – Used to convert integer into a string.
+complex(real,imag) – This functionconverts real numbers to complex(real,imag) number.
+
+10. What is the difference between Python Arrays and lists?
+
+Arrays and lists, in Python, have the same way of storing data. But, arrays can hold only a single data type elements whereas lists can hold any data type elements.
+
+
+11. What are functions in Python?
+
+A function is a block of code which is executed only when it is called. To define a Python function, the def keyword is used.
+
+Example:
+
+def Newfunc():
+	print("Hi, Welcome to Anamika Notes.")
+	Newfunc(); #calling the function
+Output: Hi, Welcome to Anamika Notes.
+
+12. What is a lambda function?
+
+An anonymous function is known as a lambda function. This function can have any number of parameters but, can have just one statement.
+
+Example:
+
+a = lambda x,y : x+y
+print(a(5, 6))
+Output: 11
+
+13. How does break, continue and pass work?
+
+Break      --->	  Allows loop termination when some condition is met and the control is transferred to the next statement.
+
+Continue   --->	  Allows skipping some part of a loop when some specific condition is met and the control is transferred to the beginning of the loop
+
+Pass	   --->   Used when you need some block of code syntactically, but you want to skip its execution. This is basically a null operation. Nothing happens when this is executed.
+
+
+14. What does [::-1} do?
+
+[::-1] is used to reverse the order of an array or a sequence.
+
+For example:
+
+import array as arr
+My_Array=arr.array('i',[1,2,3,4,5])
+My_Array[::-1]
+Output: array(‘i’, [5, 4, 3, 2, 1])
+
+[::-1] reprints a reversed copy of ordered data structures such as an array or a list. the original array or list remains unchanged.
+
+
+15. What are python iterators?
+
+Iterators are objects which can be traversed though or iterated upon.
+
+
+16. What is the difference between range & xrange?
+
+For the most part, xrange and range are the exact same in terms of functionality. They both provide a way to generate a list of integers for you to use, however you please. The only difference is that range returns a Python list object and x range returns an xrange object.
+
+This means that xrange doesn’t actually generate a static list at run-time like range does. It creates the values as you need them with a special technique called yielding. This technique is used with a type of object known as generators. That means that if you have a really gigantic range you’d like to generate a list for, say one billion, xrange is the function to use.
+
+This is especially true if you have a really memory sensitive system such as a cell phone that you are working with, as range will use as much memory as it can to create your array of integers, which can result in a Memory Error and crash your program. It’s a memory hungry beast.
+
+ 
+17. What are the generators in python?
+
+Functions that return an iterable set of items are called generators.
+
+
+18. What is the purpose of is, not and in operators?
+
+Operators are special functions. They take one or more values and produce a corresponding result.
+
+is: returns true when 2 operands are true  (Example: “a” is ‘a’)
+not: returns the inverse of the boolean value
+in: checks if some element is present in some sequence
+
+19. What is the usage of help() and dir() function in Python?
+
+Help() and dir() both functions are accessible from the Python interpreter and used for viewing a consolidated dump of built-in functions. 
+
+--> Help() function: The help() function is used to display the documentation string and also facilitates you to see the help related to modules, keywords, attributes, etc.
+--> Dir() function: The dir() function is used to display the defined symbols.
+
+
+20. What is a dictionary in Python?
+
+The built-in datatypes in Python is called dictionary. It defines one-to-one relationship between keys and values. Dictionaries contain pair of keys and their corresponding values. Dictionaries are indexed by keys.
+
+Let’s take an example:
+
+The following example contains some keys. Country, Capital & PM. Their corresponding values are India, Delhi and Modi respectively.
+
+dict={'Country':'India','Capital':'Delhi','PM':'Modi'}
+print dict[Country]
+Output: India
+
+print dict[Capital]
+Output: Delhi
+
+print dict[PM]
+Output: Modi
+
+
+21. How can the ternary operators be used in python?
+
+The Ternary operator is the operator that is used to show the conditional statements. This consists of the true or false values with a statement that has to be evaluated for it.
+
+Syntax:
+
+The Ternary operator will be given as:
+
+[on_true] if [expression] else [on_false]x, y = 25, 50big = x if x < y else y
+
+Example:
+
+The expression gets evaluated like if x<y else y, in this case if x<y is true then the value is returned as big=x and if it is incorrect then big=y will be sent as a result.
+
+
+22. What does this mean: *args, **kwargs? And why would we use it?
+
+We use *args when we aren’t sure how many arguments are going to be passed to a function, or if we want to pass a stored list or tuple of arguments to a function. **kwargs is used when we don’t know how many keyword arguments will be passed to a function, or it can be used to pass the values of a dictionary as keyword arguments. The identifiers args and kwargs are a convention, you could also use *bob and **billy but that would not be wise.
+
+
+23. What does len() do?
+
+It is used to determine the length of a string, a list, an array, etc.
+
+Example:
+
+stg='ABCD'
+len(stg)
+
+Output: 4
+
+
+24. Explain Python Functions?
+
+A function is a section of the program or a block of code that is written once and can be executed whenever required in the program. A function is a block of self-contained statements which has a valid name, parameters list, and body. Functions make programming more functional and modular to perform modular tasks. Python provides several built-in functions to complete tasks and also allows a user to create new functions as well.
+
+There are three types of functions:
+
+Built-In Functions: copy(), len(), count() are the some built-in functions.
+User-defined Functions: Functions which are defined by a user known as user-defined functions.
+Anonymous functions: These functions are also known as lambda functions because they are not declared with the standard def keyword.
+
+25. What is zip() function in Python?
+
+Python zip() function returns a zip object, which maps a similar index of multiple containers. It takes an iterable, convert into iterator and aggregates the elements based on iterables passed. It returns an iterator of tuples.
+
+Signature
+
+zip(iterator1, iterator2, iterator3 ...) 
+
+Parameters:
+iterator1, iterator2, iterator3: These are iterator objects that are joined together.
+Return
+It returns an iterator from two or more iterators.
+
+
+26. What is the difference between remove() function and del statement?
+
+The user can use the remove() function to delete a specific object in the list.
+
+Example:
+
+list_1 = [ 3, 5, 7, 3, 9, 3 ]   
+print(list_1)  
+list_1.remove(3)   
+print("After removal: ", list_1)  
+
+Output:
+[3, 5, 7, 3, 9, 3]
+After removal: [5, 7, 3, 9, 3]
+
+
+If you want to delete an object at a specific location (index) in the list, you can either use del or pop.
+
+Example:
+
+list_1 = [ 3, 5, 7, 3, 9, 3 ]   
+print(list_1)  
+del list_1[2]  
+print("After deleting: ", list_1)
+
+Output:
+[3, 5, 7, 3, 9, 3]
+After deleting: [3, 5, 3, 9, 3]
+
+
+27. What is swapcase() function in the Python?
+
+It is a string's function which converts all uppercase characters into lowercase and vice versa. It is used to alter the existing case of the string. This method creates a copy of the string which contains all the characters in the swap case. If the string is in lowercase, it generates a small case string and vice versa. It automatically ignores all the non-alphabetic characters. See an example below.
+
+Example:
+
+string = "IT IS IN LOWERCASE."  
+print(string.swapcase())  
+  
+string = "it is in uppercase."  
+print(string.swapcase()) 
+
+Output:
+it is in lowercase. 
+IT IS IN UPPERCASE. 
+
+
+28. Why do we use join() function in Python?
+
+The join() is defined as a string method which returns a string value. It is concatenated with the elements of an iterable. It provides a flexible way to concatenate the strings. See an example below.
+
+Example:
+
+str = "Rohan"  
+str2 = "ab"  
+# Calling function    
+str2 = str.join(str2)    
+# Displaying result    
+print(str2) 
+
+Output:
+aRohanb
+
+
+29. What is the use of break statement?
+
+The break statement is used to terminate the execution of the current loop. Break always breaks the current execution and transfer control to outside the current block. If the block is in a loop, it exits from the loop, and if the break is in a nested loop, it exits from the innermost loop.
+
+Example:
+
+list_1 = ['X', 'Y', 'Z']  
+list_2 = [11, 22, 33]  
+for i in list_1:  
+    for j in list_2:  
+        print(i, j)  
+        if i == 'Y' and j == 33:  
+            print('BREAK')  
+            break  
+    else:  
+        continue  
+    break 
+
+Output:
+2
+X 11
+X 22
+X 33
+Y 11
+Y 22
+Y 33
+BREAK
+
+
+30. What is tuple in Python?
+
+A tuple is a built-in data collection type. It allows us to store values in a sequence. It is immutable, so no change is reflected in the original data. It uses () brackets rather than [] square brackets to create a tuple. We cannot remove any element but can find in the tuple. We can use indexing to get elements. It also allows traversing elements in reverse order by using negative indexing. Tuple supports various methods like max(), sum(), sorted(), Len() etc.
+
+
+31. What is the purpose of ** operator?
+
+
+** Exponent − Performs exponential (power) calculation on operators. a**b = 10 to the power 20 if a = 10 and b = 20.
+
+
+32. What is the purpose of // operator?
+
+// Floor Division − The division of operands where the result is the quotient in which the digits after the decimal point are removed.
+
+
+33. What is the purpose of is operator?
+
+is − Evaluates to true if the variables on either side of the operator point to the same object and false otherwise. x is y, here is results in 1 if id(x) equals id(y).
+
+
+34. What is the purpose of not in operator?
+
+not in − Evaluates to true if it does not finds a variable in the specified sequence and false otherwise. x not in y, here not in results in a 1 if x is not a member of sequence y.
+
+
+35. What is the purpose break statement in python?
+
+break statement − Terminates the loop statement and transfers execution to the statement immediately following the loop.
+
+
+36. What is the purpose continue statement in python?
+
+continue statement − Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating.
+
+
+37. What is the purpose pass statement in python?
+
+pass statement − The pass statement in Python is used when a statement is required syntactically but you do not want any command or code to execute.
+
+
+38. How can you pick a random item from a list or tuple?
+
+choice(seq) − Returns a random item from a list, tuple, or string.
+
+
+39. How can you pick a random item from a range?
+
+randrange ([start,] stop [,step]) − returns a randomly selected element from range(start, stop, step).
+
+
+40. How can you get a random number in python?
+
+random() − returns a random float r, such that 0 is less than or equal to r and r is less than 1.
+
+
+41. How will you set the starting value in generating random numbers?
+
+seed([x]) − Sets the integer starting value used in generating random numbers. Call this function before calling any other random module function. Returns None.
+
+
+42. What are Python's dictionaries?
+
+Python's dictionaries are kind of hash table type. They work like associative arrays or hashes found in Perl and consist of key-value pairs. A dictionary key can be almost any Python type, but are usually numbers or strings. Values, on the other hand, can be any arbitrary Python object.
+
+
+43. How will you create a dictionary in python?
+
+Dictionaries are enclosed by curly braces ({ }) and values can be assigned and accessed using square braces ([]).
+
+dict = {}
+dict['one'] = "This is one"
+dict[2]     = "This is two"
+tinydict = {'name': 'john','code':6734, 'dept': 'sales'}
+
+
+
+44. How will you get all the keys from the dictionary?
+
+Using dictionary.keys() function, we can get all the keys from the dictionary object.
+print dict.keys()   # Prints all the keys
+
+
+45. How will you get all the values from the dictionary?
+
+Using dictionary.values() function, we can get all the values from the dictionary object.
+print dict.values()   # Prints all the values
+
+
+46. How will you convert a string to an int in python?
+
+int(x [,base]) - Converts x to an integer. base specifies the base if x is a string.
+
+
+47. What Are The Principal Differences Between The Lambda And Def?
+
+-> Def can hold multiple expressions while lambda is a uni-expression function.
+-> Def generates a function and designates a name to call it later. Lambda forms a function object and returns it.
+-> Def can have a return statement. Lambda can’t have return statements.
+-> Lambda supports to get used inside a list and dictionary.
+
+
+
+48. What Is A Function In Python Programming?
+
+A function is an object which represents a block of code and is a reusable entity. It brings modularity to a program and a higher degree of code reusability.
+Python has given us many built-in functions such as print() and provides the ability to create user-defined functions.
+
+
+49. Is It Mandatory For A Python Function To Return A Value? 
+
+It is not at all necessary for a function to return any value. However, if needed, we can use None as a return value.
+
+
+50. How does For loop and While loop differ in Python and when do you choose to use them?
+
+--> For loop is generally used to iterate through the elements of various collection types such as List, Tuple, Set, and Dictionary.
+
+--> While loop is the actual looping feature that is used in any other programming language. This is how Python differs in handling loops from the other programming languages.
+
+
